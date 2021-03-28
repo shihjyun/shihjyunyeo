@@ -1,5 +1,5 @@
 {
-	"name": "syyeo",
+	"name": "shihjyunyeo",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
@@ -9,7 +9,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.4",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.0.0-next.61",
 		"prettier": "^2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"svelte": "^3.35.0",
