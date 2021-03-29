@@ -70,6 +70,7 @@ img,video{max-width:100%;height:auto}
   --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
   /* useful color */
+  --deep-blue: #0d324d;
   --purple: #7F5A83;
   --gray: #949899;
 }

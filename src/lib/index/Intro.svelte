@@ -1,5 +1,25 @@
 <script>
+  import { fade } from 'svelte/transition'
   export let briefIntro
+
+  let triggerMask, backPath, frontPath
+  $: mouseEnter = false
+
+  function handleTouchEnter() {
+    mouseEnter = true
+    triggerMask.addEventListener('mouseleave', handleTouchLeave)
+    triggerMask.addEventListener('touchend', handleTouchLeave)
+    frontPath.style.fill = '#39393B'
+    backPath.style.fill = '#636466'
+  }
+
+  function handleTouchLeave() {
+    mouseEnter = false
+    triggerMask.removeEventListener('mouseleave', handleTouchLeave)
+    triggerMask.removeEventListener('touchend', handleTouchLeave)
+    frontPath.style.fill = '#0d324d'
+    backPath.style.fill = '#7f5a83'
+  }
 </script>
 
 <style>
@@ -27,6 +47,36 @@
     transform: translate(-50%, -50%);
   }
 
+  #steven-hi-img {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #front > path {
+    transition: fill 0.3s linear;
+    transition-delay: 0.2s;
+  }
+
+  #back > path {
+    transition: fill 0.3s linear;
+    transition-delay: 0.2s;
+  }
+
+  .trigger-mask {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👋</text></svg>")
+        16 0,
+      auto;
+  }
+
   h1 {
     font-family: var(--font-primary-cn);
     font-size: var(--text-base);
@@ -51,7 +101,7 @@
 <div id="intro-img-wrap">
   <svg id="intro-img-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
     <g id="back">
-      <path style="fill:#7f5a83">
+      <path bind:this={backPath} style="fill:#7f5a83">
         <animate
           id="back-animation"
           repeatCount="indefinite"
@@ -67,7 +117,7 @@
       </path>
     </g>
     <g id="front" style="opacity:0.8">
-      <path style="fill:#0d324d">
+      <path bind:this={frontPath} style="fill:#0d324d">
         <animate
           id="front-animation"
           repeatCount="indefinite"
@@ -82,6 +132,11 @@
       </path>
     </g>
   </svg>
-  <img id="steven-work-img" src="/assets/index/images/steven-work.png" alt="working steven" />
+  {#if !mouseEnter}
+    <img in:fade id="steven-work-img" src="/assets/index/images/steven-work.png" alt="working steven" />
+  {:else}
+    <img in:fade id="steven-hi-img" src="/assets/index/images/steven-hi.png" alt="hi steven" />
+  {/if}
+  <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
 <h1>{briefIntro}</h1>
