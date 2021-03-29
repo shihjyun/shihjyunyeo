@@ -27,7 +27,7 @@
     transform: translate(-50%, -50%);
   }
 
-  p {
+  h1 {
     font-family: var(--font-primary-cn);
     font-size: var(--text-base);
     line-height: 24px;
@@ -41,7 +41,7 @@
       margin: 0 0;
     }
 
-    p {
+    h1 {
       font-size: var(--text-md);
       line-height: 30px;
     }
@@ -84,4 +84,4 @@
   </svg>
   <img id="steven-work-img" src="/assets/index/images/steven-work.png" alt="working steven" />
 </div>
-<p>{briefIntro}</p>
+<h1>{briefIntro}</h1>

@@ -9,6 +9,7 @@
 
 <script>
   import Intro from '$lib/index/Intro.svelte'
+  import SocialLinkHorizon from '$lib/index/SocialLinkHorizon.svelte'
   export let shihjyun
 
   console.log(shihjyun)
@@ -31,6 +32,7 @@
 
 <section class="intro">
   <Intro briefIntro={shihjyun.brief_intro} />
+  <SocialLinkHorizon />
 </section>
 
 <section />

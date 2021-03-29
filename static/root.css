@@ -68,4 +68,8 @@ img,video{max-width:100%;height:auto}
   --text-md: calc(1em * var(--text-scale-ratio));
   --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  /* useful color */
+  --purple: #7F5A83;
+  --gray: #949899;
 }
