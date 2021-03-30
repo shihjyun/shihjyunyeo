@@ -2,23 +2,20 @@
   import { fade } from 'svelte/transition'
   export let briefIntro
 
-  let triggerMask, backPath, frontPath
-  $: mouseEnter = false
+  let triggerMask, backPath, frontPath, stevenWork, stevenHi
 
   function handleTouchEnter() {
-    mouseEnter = true
     triggerMask.addEventListener('mouseleave', handleTouchLeave)
     triggerMask.addEventListener('touchend', handleTouchLeave)
-    frontPath.style.fill = '#39393B'
-    backPath.style.fill = '#636466'
+    stevenWork.style.opacity = 0
+    stevenHi.style.opacity = 1
   }
 
   function handleTouchLeave() {
-    mouseEnter = false
     triggerMask.removeEventListener('mouseleave', handleTouchLeave)
     triggerMask.removeEventListener('touchend', handleTouchLeave)
-    frontPath.style.fill = '#0d324d'
-    backPath.style.fill = '#7f5a83'
+    stevenWork.style.opacity = 1
+    stevenHi.style.opacity = 0
   }
 </script>
 
@@ -53,16 +50,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  #front > path {
-    transition: fill 0.3s linear;
-    transition-delay: 0.2s;
-  }
-
-  #back > path {
-    transition: fill 0.3s linear;
-    transition-delay: 0.2s;
   }
 
   .trigger-mask {
@@ -132,11 +119,20 @@
       </path>
     </g>
   </svg>
-  {#if !mouseEnter}
-    <img in:fade id="steven-work-img" src="/assets/index/images/steven-work.png" alt="working steven" />
-  {:else}
-    <img in:fade id="steven-hi-img" src="/assets/index/images/steven-hi.png" alt="hi steven" />
-  {/if}
+  <img
+    bind:this={stevenWork}
+    id="steven-work-img"
+    style="opacity: 1;"
+    src="/assets/index/images/steven-work.png"
+    alt="working steven"
+  />
+  <img
+    bind:this={stevenHi}
+    id="steven-hi-img"
+    style="opacity: 0;"
+    src="/assets/index/images/steven-hi.png"
+    alt="hi steven"
+  />
   <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
 <h1>{briefIntro}</h1>
