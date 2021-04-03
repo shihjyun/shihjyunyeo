@@ -42,6 +42,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
   }
 
   #steven-hi-img {
@@ -50,6 +51,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
   }
 
   .trigger-mask {

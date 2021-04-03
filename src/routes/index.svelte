@@ -18,14 +18,19 @@
 
 <style>
   main {
-    max-width: 800px;
     margin: 0 auto;
+    position: relative;
   }
+
+  section {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+  }
+
   section.intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
   }
 </style>
 
@@ -40,6 +45,6 @@
     <SocialLinkHorizon />
   </section>
   <section class="feature-projects">
-    <FeatureProjects featureProjectsData={shihjyun.feature_projects} />
+    <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
   </section>
 </main>
