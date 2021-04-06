@@ -1,5 +1,5 @@
 <script>
-  // your script goes here
+  import Footer from '$lib/layout/Footer.svelte'
 </script>
 
 <style>
@@ -11,3 +11,5 @@
 <main>
   <slot />
 </main>
+
+<Footer />
