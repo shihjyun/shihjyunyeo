@@ -55,6 +55,7 @@ img,video{max-width:100%;height:auto}
 
 body.no-scroll {
   overflow-y: hidden;
+  height:100%;
 }
 
 :root {

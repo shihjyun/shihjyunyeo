@@ -32,12 +32,14 @@
     max-width: 100%;
     min-height: 100vh;
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     transition: backdrop-filter 0.2s linear;
     pointer-events: none;
   }
 
   :global(.project-modal-wrap.blur) {
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     pointer-events: initial;
   }
 

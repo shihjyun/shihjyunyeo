@@ -17,11 +17,6 @@
 </script>
 
 <style>
-  main {
-    margin: 0 auto;
-    position: relative;
-  }
-
   section {
     max-width: 800px;
     margin: 0 auto 3rem auto;
@@ -39,12 +34,10 @@
   <!-- <meta name="description" content="" /> -->
 </svelte:head>
 
-<main>
-  <section class="intro">
-    <Intro briefIntro={shihjyun.brief_intro} />
-    <SocialLinkHorizon />
-  </section>
-  <section class="feature-projects">
-    <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
-  </section>
-</main>
+<section class="intro">
+  <Intro briefIntro={shihjyun.brief_intro} />
+  <SocialLinkHorizon />
+</section>
+<section class="feature-projects">
+  <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
+</section>
