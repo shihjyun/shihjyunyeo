@@ -1,10 +1,9 @@
 <script>
   import { fade } from 'svelte/transition'
   import { createEventDispatcher } from 'svelte'
+  import ProjectTag from '$lib/index/ProjectTag.svelte'
 
   export let showProjectModal, projectInfo
-
-  $: console.log(projectInfo)
 
   let modalWrap
 
@@ -77,26 +76,6 @@
     margin-bottom: 0.5rem;
   }
 
-  .project-tag {
-    font-size: var(--text-sm);
-    color: white;
-    border: white solid 0px;
-    border-radius: 5px;
-    padding: 2px 8px;
-    margin: 3px 3px 3px 3px;
-    -webkit-box-shadow: 3px 3px 3px -2px rgb(185, 185, 185);
-    -moz-box-shadow: 3px 3px 3px -2px rgb(185, 185, 185);
-    box-shadow: 3px 3px 3px -2px rgb(185, 185, 185);
-  }
-
-  .project-tag.from {
-    background-color: rgb(108, 82, 129);
-  }
-
-  .project-tag.tool {
-    background-color: rgb(223, 106, 53);
-  }
-
   .project-info-wrap {
     width: 260px;
     margin: 0 auto 1.5rem auto;
@@ -158,11 +137,11 @@
       <div class="project-info-wrap">
         <h4>✨ {projectInfo.p_name} ✨</h4>
         <div class="project-published-date">{projectInfo.p_date}</div>
-        <img width="100%" src={projectInfo.p_img} alt={projectInfo.p_name} />
+        <img src={projectInfo.p_img} alt={projectInfo.p_name} />
         <div class="project-tags-wrap">
-          <span class="project-tag from">{projectInfo.p_from}</span>
+          <ProjectTag tagType="--tag-color-type">{projectInfo.p_from}</ProjectTag>
           {#each projectInfo.p_tools as tool}
-            <span class="project-tag tool">{tool}</span>
+            <ProjectTag tagType="--tag-color-tool">{tool}</ProjectTag>
           {/each}
         </div>
         <p>{projectInfo.p_discription}</p>
