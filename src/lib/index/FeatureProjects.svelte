@@ -52,13 +52,19 @@
   }
 
   .feature-img-wrap {
+    position: relative;
     width: 100%;
-    height: auto;
+    padding-bottom: 67%;
     border: 0.5px solid #7c7c7c;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s linear;
+    background-color: var(--light-gray);
+  }
+
+  img {
+    position: absolute;
   }
 
   .feature-img-wrap:hover {
@@ -87,10 +93,7 @@
 
 <div class="features-container">
   {#each featureProjectsData as { p_img, p_name, p_date, p_discription, p_from, p_url, p_tools }}
-    <div
-      class="feature-wrap"
-      on:click|preventDefault={getProjectDetail(p_img, p_name, p_date, p_discription, p_from, p_url, p_tools)}
-    >
+    <div on:click|preventDefault={getProjectDetail(p_img, p_name, p_date, p_discription, p_from, p_url, p_tools)}>
       <div class="feature-img-wrap">
         <img width="100%" src={p_img} alt={p_name} />
       </div>
