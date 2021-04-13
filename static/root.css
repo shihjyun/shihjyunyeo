@@ -80,7 +80,9 @@ body.no-scroll {
   --gray: #949899;
   --light-gray: #E4E4E4;
 
+
   /* tag color */
   --tag-color-type: #6C5281;
   --tag-color-tool: #DF6A35;
+  --tag-color-form: #b3475f;
 }

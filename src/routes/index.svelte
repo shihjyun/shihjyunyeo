@@ -11,6 +11,7 @@
   import Intro from '$lib/index/Intro.svelte'
   import SocialLinkHorizon from '$lib/index/SocialLinkHorizon.svelte'
   import FeatureProjects from '$lib/index/FeatureProjects.svelte'
+
   export let shihjyun
 
   console.log(shihjyun)

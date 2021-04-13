@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition'
   import { createEventDispatcher } from 'svelte'
-  import ProjectTag from '$lib/index/ProjectTag.svelte'
+  import ProjectTag from '$lib/shared/ProjectTag.svelte'
 
   export let showProjectModal, projectInfo
 
