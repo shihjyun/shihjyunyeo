@@ -9,13 +9,15 @@
 
   const dispatch = createEventDispatcher()
 
-  function closeModal() {
-    modalWrap.classList.remove('blur')
-    document.querySelector('body').classList.remove('no-scroll')
-    // sent closed message to parent component's `showProjectModal` variable
-    dispatch('modalShow', {
-      value: false,
-    })
+  function closeModal(e) {
+    if (e.target.classList.contains('close-btn') || e.target.classList.contains('project-modal-wrap')) {
+      modalWrap.classList.remove('blur')
+      document.querySelector('body').classList.remove('no-scroll')
+      // sent closed message to parent component's `showProjectModal` variable
+      dispatch('modalShow', {
+        value: false,
+      })
+    }
   }
 </script>
 
@@ -113,7 +115,7 @@
 </style>
 
 <!-- markup (zero or more items) goes here -->
-<div bind:this={modalWrap} class="project-modal-wrap">
+<div bind:this={modalWrap} on:click={closeModal} class="project-modal-wrap">
   {#if showProjectModal}
     <div transition:fade={{ duration: 100 }} class="project-detail-wrap">
       <svg

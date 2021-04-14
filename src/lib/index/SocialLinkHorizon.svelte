@@ -1,7 +1,3 @@
-<script>
-  // your script goes here
-</script>
-
 <style>
   div {
     display: flex;
@@ -10,6 +6,7 @@
   }
   a {
     margin: 0 0.75rem;
+    transform-origin: center center;
   }
   svg {
     width: 24px;
