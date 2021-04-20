@@ -147,7 +147,9 @@
           {/each}
         </div>
         <p>{projectInfo.p_discription}</p>
-        <div class="project-url-wrap"><a href={projectInfo.p_url} target="_blank">走！去看作品 👀</a></div>
+        <div class="project-url-wrap">
+          <a sveltekit:prefetch href={projectInfo.p_url} target="_blank">走！去看作品 👀</a>
+        </div>
       </div>
     </div>
   {/if}

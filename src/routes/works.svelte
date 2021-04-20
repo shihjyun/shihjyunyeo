@@ -77,6 +77,12 @@
   }
 </style>
 
+<svelte:head>
+  <title>作品清單 - Steven Yeo</title>
+  <meta property="og:url" content="https://www.shihjyun.com/works" />
+  <link rel="canonical" href="https://www.shihjyun.com/works" />
+</svelte:head>
+
 <section>
   <h1>🗂 作品清單 🗂</h1>
   <div class="other-works-container">

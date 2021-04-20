@@ -32,6 +32,8 @@
 
 <svelte:head>
   <title>Steven Yeo</title>
+  <meta property="og:url" content="https://www.shihjyun.com" />
+  <link rel="canonical" href="https://www.shihjyun.com" />
   <!-- <meta name="description" content="" /> -->
 </svelte:head>
 
