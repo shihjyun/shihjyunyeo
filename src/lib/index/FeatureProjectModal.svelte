@@ -121,8 +121,8 @@
       <svg
         class="close-btn"
         id="close-icon"
-        height="20"
-        width="20"
+        height="15"
+        width="15"
         viewBox="0 0 32 32"
         version="1.1"
         on:click={closeModal}

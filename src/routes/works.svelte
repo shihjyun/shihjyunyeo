@@ -16,7 +16,7 @@
 <style>
   h1 {
     margin: 1rem 2rem 2rem 2rem;
-    font-size: var(--text-lg);
+    font-size: var(--text-md-2);
   }
   section {
     max-width: 600px;
@@ -54,7 +54,6 @@
   @media (min-width: 650px) {
     h1 {
       margin: 1rem 2rem 3rem 2rem;
-      font-size: var(--text-lg);
     }
 
     span {

@@ -13,6 +13,7 @@
   }
 
   p {
+    font-size: var(--text-sm);
     color: rgb(39, 39, 39);
     text-align: center;
   }
@@ -21,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   a {
     margin: 0 0.75rem;

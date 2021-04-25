@@ -22,7 +22,7 @@
 
 <style>
   h2 {
-    font-size: var(--text-lg);
+    font-size: var(--text-md);
     line-height: 24px;
     letter-spacing: 0.05em;
     color: #1a1919;
@@ -31,7 +31,7 @@
 
   h3 {
     text-align: center;
-    font-size: var(--text-md);
+    font-size: var(--text-base-2);
     color: #413f3f;
     margin-top: 0.5rem;
     letter-spacing: 0.02em;
@@ -83,7 +83,7 @@
 
   .more-works > span {
     position: absolute;
-    font-size: var(--text-md);
+    font-size: var(--text-base-2);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -112,7 +112,7 @@
 
   @media (min-width: 650px) {
     h2 {
-      font-size: var(--text-lg);
+      font-size: var(--text-md);
       letter-spacing: 0.1em;
     }
 
