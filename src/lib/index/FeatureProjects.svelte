@@ -139,6 +139,6 @@
       <h3>{p_name}</h3>
     </div>
   {/each}
-  <a href="/works"><div class="more-works"><span>更多作品 🧐</span></div></a>
+  <a sveltekit:prefetch href="/works"><div class="more-works"><span>更多作品 🧐</span></div></a>
 </div>
 <FeatureProjectModal on:modalShow={getClosedModalMessage} {showProjectModal} {projectInfo} />
