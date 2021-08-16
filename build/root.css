@@ -53,19 +53,37 @@ img,video{max-width:100%;height:auto}
   font-family: var(--font-primary-cn);
 }
 
+body.no-scroll {
+  overflow-y: hidden;
+  height:100%;
+}
+
 :root {
   /* base font family */
   --font-primary-cn: 'Noto Sans TC',  '黑體-繁', '微軟正黑體', sans-serif;
 
-  /* base values */
-  --text-base-size: 1em;
-  --text-scale-ratio: 1.2;
-
   /* type scale */
-  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
-  --text-sm: calc(1em / var(--text-scale-ratio));
-  --text-base: var(--text-base-size);
-  --text-md: calc(1em * var(--text-scale-ratio));
-  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-base-2: 18px;
+  --text-md: 20px;
+  --text-md-2: 24px;
+  --text-lg: 30px;
+  --text-lg-2: 36px;
+  --text-xl: 48px;
+  --text-xl-2: 60px;
+  --text-xl-3: 72px;
+
+  /* useful color */
+  --deep-blue: #0d324d;
+  --purple: #7F5A83;
+  --gray: #949899;
+  --light-gray: #E4E4E4;
+
+
+  /* tag color */
+  --tag-color-type: #6C5281;
+  --tag-color-tool: #DF6A35;
+  --tag-color-form: #b3475f;
 }
