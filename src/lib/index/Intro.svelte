@@ -1,6 +1,4 @@
 <script>
-  export let briefIntro
-
   let triggerMask, backPath, frontPath, stevenWork, stevenHi
 
   function handleTouchEnter() {
@@ -314,4 +312,7 @@
   />
   <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
-<h1>{briefIntro}</h1>
+<h1>
+  嗨！我是Steven，現在在關鍵評論網寫code、做圖表、做資料新聞。<br />目前也與喜歡資料新聞及數位敘事的朋友一起經營
+  <a style="color: #2d6a4f;" target="_blank" href="https://ddstoryhub.com">DD Story Hub</a>，紀錄研究與學習的過程。
+</h1>

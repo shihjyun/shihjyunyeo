@@ -13,8 +13,6 @@
   import FeatureProjects from '$lib/index/FeatureProjects.svelte'
 
   export let shihjyun
-
-  console.log(shihjyun)
 </script>
 
 <style>
@@ -28,6 +26,13 @@
     flex-direction: column;
     align-items: center;
   }
+
+  p {
+    font-size: 14px;
+    color: rgb(87, 87, 87);
+    text-align: center;
+    margin: 5rem auto 3rem auto;
+  }
 </style>
 
 <svelte:head>
@@ -38,9 +43,10 @@
 </svelte:head>
 
 <section class="intro">
-  <Intro briefIntro={shihjyun.brief_intro} />
+  <Intro />
   <SocialLinkHorizon />
 </section>
 <section class="feature-projects">
   <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
 </section>
+<p>更新日期：2021-08-17</p>
