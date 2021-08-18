@@ -49,4 +49,4 @@
 <section class="feature-projects">
   <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
 </section>
-<p>更新日期：2021-08-17</p>
+<p>更新日期：2021-08-18</p>

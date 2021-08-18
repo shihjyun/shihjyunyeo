@@ -1,6 +1,19 @@
 {
   "feature_projects_cn": [
     {
+      "p_name": "加密貨幣遭駭損失視覺化",
+      "p_discription": "我整理了近5年間40件的加密貨幣平台遭駭案件，來觀察此類案件一共造成多少損失。",
+      "p_url": "https://www.thenewslens.com/interactive/155175",
+      "p_date": "2021-08-15",
+      "p_img": "/assets/index/images/crypto-exchange-hacks.gif",
+      "p_from": "TNL",
+      "p_tools": [
+        "Svelte",
+        "D3",
+        "illustrator"
+      ]
+    },
+    {
       "p_name": "DD Story Hub 寫作平台",
       "p_discription": "與 DD Story Hub 夥伴們一起製作的小型寫作平台，我主要負責網站的建置與各項功能的開發。",
       "p_url": "https://www.ddstoryhub.com",
