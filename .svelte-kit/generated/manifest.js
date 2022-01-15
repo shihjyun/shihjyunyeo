@@ -1,11 +1,11 @@
 const c = [
-	() => import("../../../src/routes/__layout.svelte"),
-	() => import("../../../src/routes/__error.svelte"),
-	() => import("../../../src/routes/index.svelte"),
-	() => import("../../../src/routes/works.svelte"),
-	() => import("../../../src/routes/post/__layout.svelte"),
-	() => import("../../../src/routes/post/index.svelte"),
-	() => import("../../../src/routes/post/[slug].svelte")
+	() => import("../../src/routes/__layout.svelte"),
+	() => import("../../src/routes/__error.svelte"),
+	() => import("../../src/routes/index.svelte"),
+	() => import("../../src/routes/works.svelte"),
+	() => import("../../src/routes/post/__layout.svelte"),
+	() => import("../../src/routes/post/index.svelte"),
+	() => import("../../src/routes/post/[slug].svelte")
 ];
 
 const d = decodeURIComponent;
