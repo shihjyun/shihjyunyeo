@@ -2,7 +2,7 @@
   import archieml from 'archieml';
   import Post from '$lib/post/Post.svelte';
 
-  export async function load({ url, params, fetch }) {
+  export async function load({ url, fetch }) {
     try {
       const post = await fetch(`${url.origin}${url.pathname}/content.txt`);
 
@@ -22,6 +22,13 @@
 
 <script>
   export let post;
+
+  // custom components
+  import Card from '$lib/post/20220130/Card.svelte';
+
+  const components = {
+    card: Card,
+  };
 </script>
 
-<Post {post} />
+<Post {post} {components} />

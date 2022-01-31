@@ -3,9 +3,11 @@
 </script>
 
 <style>
-  /* your styles go here */
+  main {
+    min-height: 100vh;
+  }
 </style>
 
-<article>
+<main>
   <slot />
-</article>
+</main>

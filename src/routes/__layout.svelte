@@ -8,8 +8,6 @@
 
 <!-- markup (zero or more items) goes here -->
 
-<main>
-  <slot />
-</main>
+<slot />
 
 <Footer />
