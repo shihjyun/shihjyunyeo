@@ -8,6 +8,7 @@
 
       return {
         props: {
+          url,
           post: archieml.load(await post.text()),
         },
       };
@@ -21,7 +22,12 @@
 </script>
 
 <script>
+  export let url;
   export let post;
+
+  import {setContext} from 'svelte'
+
+  setContext('url', url)
 
   // custom components
   import Card from '$lib/post/20220130/Card.svelte';
