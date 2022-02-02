@@ -1,18 +1,18 @@
 <script context="module">
   export async function load({ fetch }) {
-    const res = await fetch('/assets/index/base_data/shihjyun_data.json')
-    const shihjyun = await res.json()
+    const res = await fetch('/assets/index/base_data/shihjyun_data.json');
+    const shihjyun = await res.json();
 
-    return { props: { shihjyun } }
+    return { props: { shihjyun } };
   }
 </script>
 
 <script>
-  import Intro from '$lib/index/Intro.svelte'
-  import SocialLinkHorizon from '$lib/index/SocialLinkHorizon.svelte'
-  import FeatureProjects from '$lib/index/FeatureProjects.svelte'
+  import Intro from '$lib/index/Intro.svelte';
+  import SocialLinkHorizon from '$lib/index/SocialLinkHorizon.svelte';
+  import FeatureProjects from '$lib/index/FeatureProjects.svelte';
 
-  export let shihjyun
+  export let shihjyun;
 </script>
 
 <style>
@@ -44,7 +44,6 @@
 
 <section class="intro">
   <Intro />
-  <SocialLinkHorizon />
 </section>
 <section class="feature-projects">
   <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />

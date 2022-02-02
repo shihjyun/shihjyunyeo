@@ -15,7 +15,7 @@
   }
 
   header {
-    margin: 48px 0 32px 0;
+    margin: 100px 0 32px 0;
     > h1 {
       font-size: var(--text-md-2);
       font-weight: 500;

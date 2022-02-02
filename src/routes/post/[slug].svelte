@@ -1,8 +1,7 @@
 <script context="module">
   import archieml from 'archieml';
-  import Post from '$lib/post/Post.svelte';
 
-  export async function load({ url, params, fetch }) {
+  export async function load({ url, fetch }) {
     try {
       const post = await fetch(`${url.origin}${url.pathname}/content.txt`);
 
@@ -25,10 +24,11 @@
   export let url;
   export let post;
 
-  import {setContext} from 'svelte'
+  import { setContext } from 'svelte';
 
-  setContext('url', url)
+  import Post from '$lib/post/Post.svelte';
 
+  setContext('url', url);
 </script>
 
 <Post {post} />

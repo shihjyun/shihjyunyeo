@@ -1,6 +1,5 @@
 <script context="module">
   import archieml from 'archieml';
-  import Post from '$lib/post/Post.svelte';
 
   export async function load({ url, fetch }) {
     try {
@@ -25,9 +24,11 @@
   export let url;
   export let post;
 
-  import {setContext} from 'svelte'
+  import { setContext } from 'svelte';
 
-  setContext('url', url)
+  import Post from '$lib/post/Post.svelte';
+
+  setContext('url', url);
 
   // custom components
   import Card from '$lib/post/20220130/Card.svelte';
