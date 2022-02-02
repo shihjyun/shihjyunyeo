@@ -77,15 +77,15 @@
     >
     <a
       sveltekit:prefetch
-      href="/post"
-      class="item"
-      style:color={path.includes('/post') ? 'var(--purple)' : 'var(--text-base-gray)'}>文章</a
-    >
-    <a
-      sveltekit:prefetch
       href="/works"
       class="item"
       style:color={path === '/works' ? 'var(--purple)' : 'var(--text-base-gray)'}>作品</a
+    >
+    <a
+      sveltekit:prefetch
+      href="/post"
+      class="item"
+      style:color={path.includes('/post') ? 'var(--purple)' : 'var(--text-base-gray)'}>文章</a
     >
     <div class="social">
       <a href="https://github.com/shihjyun" target="_blank"
