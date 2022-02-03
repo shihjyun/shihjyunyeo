@@ -31,7 +31,7 @@
   setContext('url', url);
 
   // custom components
-  import ExampleComponent from '$lib/post/[slug]/ExampleComponent.svelte';
+  import ExampleComponent from '$lib/post/test-special/ExampleComponent.svelte';
 
   const components = {
     'example-component': ExampleComponent,
