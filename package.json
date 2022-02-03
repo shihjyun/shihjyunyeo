@@ -2,11 +2,12 @@
   "name": "shihjyunyeo",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "dev": "svelte-kit dev && node utils/genPostsMeta.cjs",
+    "build": "svelte-kit build && node utils/genPostsMeta.cjs",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "addNewPost": "node utils/addNewPost.cjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
