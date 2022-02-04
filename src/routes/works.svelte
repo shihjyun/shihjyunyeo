@@ -1,99 +1,120 @@
 <script context="module">
-  export async function load({ fetch }) {
-    const res = await fetch('/assets/index/base_data/shihjyun_data.json')
-    const shihjyun = await res.json()
+  import archieml from 'archieml';
 
-    return { props: { shihjyun } }
+  export async function load({ url, fetch }) {
+    const works = await fetch(`${url.origin}${url.pathname}/works-meta.txt`);
+
+    return { props: { works: archieml.load(await works.text()) } };
   }
 </script>
 
 <script>
-  import ProjectTag from '$lib/shared/ProjectTag.svelte'
-
-  export let shihjyun
+  export let works;
 </script>
 
 <style>
   h1 {
-    margin: 1rem 2rem 2rem 2rem;
-    font-size: var(--text-md-2);
-  }
-  section {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  a {
-    font-size: var(--text-sm);
-    color: #1a1919;
-    transition: opacity 0.1s linear;
+    text-align: center;
+    font-size: var(--text-base);
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: var(--text-base-gray);
+    margin: 96px auto 24px auto;
+    max-width: 375px;
   }
 
-  a:hover {
-    opacity: 0.7;
-  }
-
-  span {
-    font-size: var(--text-sm);
-  }
-
-  .other-works-container {
+  .works {
+    position: relative;
+    width: 800px;
     display: grid;
-    align-items: center;
-    grid-template-columns: 5rem auto;
-    gap: 0.8rem 0.5rem;
-    margin-top: 1rem;
-    margin: 1rem 2rem 0 2rem;
+    gap: 32px 32px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin-top: 16px;
+    margin: 16px auto 0 auto;
   }
 
-  .project-tags-wrap {
-    display: flex;
-    flex-wrap: wrap;
+  h2 {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--text-base-gray);
+    margin-top: 0.5rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
   }
 
-  @media (min-width: 650px) {
-    h1 {
-      margin: 1rem 2rem 3rem 2rem;
+  h2:hover {
+    color: var(--purple);
+  }
+
+  .works-container:hover h2 {
+    color: var(--purple);
+  }
+
+  .works-container:hover .works-cover-wrap {
+    transform: translate3D(3px, -3px, 0);
+  }
+
+  .works-cover-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 67%;
+    border: 0.5px solid var(--light-gray);
+    border-radius: 2.5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+    background-color: var(--light-gray);
+  }
+  img {
+    position: absolute;
+  }
+
+  p {
+    font-size: 14px;
+    color: rgb(87, 87, 87);
+    text-align: center;
+    margin: 80px auto 48px auto;
+  }
+
+  @media screen and (max-width: 860px) {
+    .works {
+      width: 600px;
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    span {
+    h2 {
       font-size: var(--text-base);
     }
+  }
 
-    a {
-      font-size: var(--text-base);
-    }
-
-    .other-works-container {
-      align-items: start;
-      gap: 2rem 1rem;
-      grid-template-columns: 6rem auto;
-    }
-
-    .project-tags-wrap {
-      margin-top: 0.4rem;
+  @media screen and (max-width: 650px) {
+    .works {
+      width: 300px;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 </style>
 
 <svelte:head>
-  <title>作品清單 - Steven Yeo</title>
   <meta property="og:url" content="https://www.shihjyun.com/works" />
   <link rel="canonical" href="https://www.shihjyun.com/works" />
 </svelte:head>
 
-<section>
-  <h1>🗂 作品清單 🗂</h1>
-  <div class="other-works-container">
-    {#each shihjyun.other_works_cn as { p_date, p_form, p_name, p_type, p_url }}
-      <span>{p_date}</span>
-      <div>
-        <a href={p_url} target="_blank">{p_name}</a>
-        <div class="project-tags-wrap">
-          <ProjectTag tagType="--tag-color-type">{p_type}</ProjectTag>
-          <ProjectTag tagType="--tag-color-form">{p_form}</ProjectTag>
-        </div>
-      </div>
-    {/each}
-  </div>
-</section>
+<h1>✨一些個人及工作上的作品們✨</h1>
+
+<div class="works">
+  {#each works.works as { title, cover, url }}
+    <div class="works-container">
+      <a class="works-cover-wrap" href={url} target="_blank">
+        <img width="100%" src={`/works/cover/${cover}`} alt={title} />
+      </a>
+      <a href={url} target="_blank">
+        <h2>{title}</h2>
+      </a>
+    </div>
+  {/each}
+</div>
+
+<p>更新日期：{works.updated_date}</p>

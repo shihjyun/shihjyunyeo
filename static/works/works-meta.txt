@@ -1,5 +1,30 @@
+updated_date: 2022-02-05
 
 [works]
+
+title: 2021台股回顧
+url: https://www.cw.com.tw/graphics/taiwan-stock-market-2021/index.html
+cover: taiwan-stock-market-2021.gif
+published_date: 2022-01-25
+tags: CW,Svelte,D3
+
+title: 2021台灣公投即時開票
+url: https://www.cw.com.tw/graphics/referendum-2021/
+cover: referendum-2021.gif
+published_date: 2021-12-19
+tags: CW,Svelte,D3
+
+title: 北海航線
+url: https://www.thenewslens.com/interactive/155498
+cover: northern-sea-route.gif
+published_date: 2021-11-12
+tags: TNL,Svelte,QGIS,Blender
+
+title: 2021日本大選
+url: https://www.thenewslens.com/interactive/150604
+cover: japan-election-2021.gif
+published_date: 2021-10-14
+tags: TNL,Svelte
 
 title: 加密貨幣遭駭損失視覺化
 url: https://www.thenewslens.com/interactive/155175

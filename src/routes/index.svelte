@@ -4,7 +4,7 @@
   export async function load({ url, fetch }) {
     const works = await fetch(`${url.origin}${url.pathname}/works/works-meta.txt`);
 
-    return { props: { works:  archieml.load(await works.text()).works} };
+    return { props: { works:  archieml.load(await works.text())} };
   }
 </script>
 
@@ -31,7 +31,7 @@
     font-size: 14px;
     color: rgb(87, 87, 87);
     text-align: center;
-    margin: 5rem auto 3rem auto;
+    margin: 80px auto 48px auto;
   }
 </style>
 
@@ -46,6 +46,6 @@
   <Intro />
 </section>
 <section class="recent-projects">
-  <RecentWorks {works} />
+  <RecentWorks works={works.works} />
 </section>
-<p>更新日期：2021-08-18</p>
+<p>更新日期：{works.updated_date}</p>

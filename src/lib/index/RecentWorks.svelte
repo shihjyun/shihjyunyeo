@@ -119,7 +119,7 @@
   {#each works.slice(0, 5) as { title, cover, url }}
     <div class="works-container">
       <a class="works-cover-wrap" href={url} target="_blank">
-          <img width="100%" src={`/works/cover/${cover}`} alt={title} />
+        <img width="100%" src={`/works/cover/${cover}`} alt={title} />
       </a>
       <a href={url} target="_blank">
         <h3>{title}</h3>
