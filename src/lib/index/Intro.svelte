@@ -1,34 +1,34 @@
 <script>
-  let triggerMask, backPath, frontPath, stevenWork, stevenHi
+  let triggerMask, backPath, frontPath, stevenWork, stevenHi;
 
   function handleTouchEnter() {
-    triggerMask.addEventListener('mouseleave', handleTouchLeave)
-    triggerMask.addEventListener('touchend', handleTouchLeave)
-    stevenWork.style.opacity = 0
-    stevenHi.style.opacity = 1
-    shakeSelectedElements('shaking', '.intro a , .feature-img-wrap, .features-container > a')
+    triggerMask.addEventListener('mouseleave', handleTouchLeave);
+    triggerMask.addEventListener('touchend', handleTouchLeave);
+    stevenWork.style.opacity = 0;
+    stevenHi.style.opacity = 1;
+    shakeSelectedElements('shaking', 'nav > .wrapper > .item, nav .social > a, #shaking-hand');
   }
 
   function handleTouchLeave() {
-    triggerMask.removeEventListener('mouseleave', handleTouchLeave)
-    triggerMask.removeEventListener('touchend', handleTouchLeave)
-    stevenWork.style.opacity = 1
-    stevenHi.style.opacity = 0
-    shakeSelectedElements('freeze', '.shaking')
+    triggerMask.removeEventListener('mouseleave', handleTouchLeave);
+    triggerMask.removeEventListener('touchend', handleTouchLeave);
+    stevenWork.style.opacity = 1;
+    stevenHi.style.opacity = 0;
+    shakeSelectedElements('freeze', '.shaking');
   }
 
   function shakeSelectedElements(shakingSignal, elmsPath) {
     if (shakingSignal === 'shaking') {
-      const elms = document.querySelectorAll(elmsPath)
+      const elms = document.querySelectorAll(elmsPath);
       for (let i = 0; i < elms.length; i++) {
-        !elms[i].classList.contains('shaking') ? elms[i].classList.add('shaking') : null
-        elms[i].style.animationDelay = 0.1 * i + 's'
+        !elms[i].classList.contains('shaking') ? elms[i].classList.add('shaking') : null;
+        elms[i].style.animationDelay = 0.1 * i + 's';
       }
     } else {
-      const elms = document.querySelectorAll(elmsPath)
+      const elms = document.querySelectorAll(elmsPath);
       for (let i = 0; i < elms.length; i++) {
-        elms[i].classList.contains('shaking') ? elms[i].classList.remove('shaking') : null
-        elms[i].style.animationDelay = ''
+        elms[i].classList.contains('shaking') ? elms[i].classList.remove('shaking') : null;
+        elms[i].style.animationDelay = '';
       }
     }
   }
@@ -40,7 +40,7 @@
     width: 100%;
     max-width: 400px;
     height: 400px;
-    margin: 0 2rem;
+    margin: 15px 0 0 0;
   }
 
   #intro-img-bg {
@@ -82,12 +82,12 @@
   }
 
   h1 {
+    max-width: 375px;
     font-family: var(--font-primary-cn);
     font-size: var(--text-base);
     line-height: 24px;
     letter-spacing: 0.05em;
-    color: #000000;
-    margin: 0 2rem;
+    color: var(--text-base-gray);
   }
 
   :global(.shaking) {
@@ -250,14 +250,17 @@
     }
   }
 
-  @media (min-width: 650px) {
+  @media screen and (max-width: 768px) {
     #intro-img-wrap {
-      margin: 0 0;
+      margin: 20px 24px 0 24px;
+      max-width: 375px;
+      height: 375px;
     }
 
     h1 {
-      font-size: var(--text-md);
-      line-height: 30px;
+      font-size: var(--text-base);
+      line-height: 24px;
+      padding: 0 24px;
     }
   }
 </style>
@@ -313,6 +316,7 @@
   <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
 <h1>
-  嗨！我是Steven，現在在天下雜誌寫code、做圖表、做資料新聞。<br />目前也與喜歡資料新聞及數位敘事的朋友一起經營
+  <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是天下雜誌的圖表工程師。<br /><br
+  />目前也與喜歡資料新聞及數位敘事的朋友一起經營
   <a style="color: #2d6a4f;" target="_blank" href="https://ddstoryhub.com">DD Story Hub</a>，紀錄研究與學習的過程。
 </h1>
