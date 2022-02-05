@@ -2,12 +2,13 @@
   "name": "shihjyunyeo",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev && node utils/genPostsMeta.cjs",
-    "build": "svelte-kit build && node utils/genPostsMeta.cjs",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "addNewPost": "node utils/addNewPost.cjs"
+    "addNewPost": "node utils/addNewPost.cjs",
+    "genPostsMeta": "node utils/genPostsMeta.cjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
@@ -27,6 +28,7 @@
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
     "archieml": "^0.5.0",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "d3-time-format": "^4.1.0"
   }
 }
