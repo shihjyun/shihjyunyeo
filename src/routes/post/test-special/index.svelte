@@ -29,6 +29,13 @@
   import Post from '$lib/post/Post.svelte';
 
   setContext('url', url);
+
+  // custom components
+  import ExampleComponent from '$lib/post/test-special/ExampleComponent.svelte';
+
+  const components = {
+    'example-component': ExampleComponent,
+  };
 </script>
 
-<Post {post} />
+<Post {post} {components} />

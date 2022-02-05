@@ -1,12 +1,10 @@
 {
   "bracketSpacing": true,
   "printWidth": 120,
-  "semi": false,
+  "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "svelteSortOrder" : "scripts-styles-markup",
-  "allowShorthand" : true,
+  "svelteSortOrder" : "options-scripts-styles-markup",
   "svelteBracketNewLine": true,
-  "svelteAllowShorthand": true,
-  "plugins": ["prettier-plugin-svelte"]
+  "svelteAllowShorthand": true
 }

@@ -1,23 +1,23 @@
 <script context="module">
-  export async function load({ fetch }) {
-    const res = await fetch('/assets/index/base_data/shihjyun_data.json')
-    const shihjyun = await res.json()
+  import archieml from 'archieml'
 
-    return { props: { shihjyun } }
+  export async function load({ url, fetch }) {
+    const works = await fetch(`${url.origin}${url.pathname}/works/works-meta.txt`);
+
+    return { props: { works:  archieml.load(await works.text())} };
   }
 </script>
 
 <script>
-  import Intro from '$lib/index/Intro.svelte'
-  import SocialLinkHorizon from '$lib/index/SocialLinkHorizon.svelte'
-  import FeatureProjects from '$lib/index/FeatureProjects.svelte'
+  import Intro from '$lib/index/Intro.svelte';
+  import RecentWorks from '$lib/index/RecentWorks.svelte';
 
-  export let shihjyun
+  export let works;
 </script>
 
 <style>
   section {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto 3rem auto;
   }
 
@@ -31,7 +31,7 @@
     font-size: 14px;
     color: rgb(87, 87, 87);
     text-align: center;
-    margin: 5rem auto 3rem auto;
+    margin: 80px auto 48px auto;
   }
 </style>
 
@@ -44,9 +44,8 @@
 
 <section class="intro">
   <Intro />
-  <SocialLinkHorizon />
 </section>
-<section class="feature-projects">
-  <FeatureProjects featureProjectsData={shihjyun.feature_projects_cn} />
+<section class="recent-projects">
+  <RecentWorks works={works.works} />
 </section>
-<p>更新日期：2021-08-18</p>
+<p>更新日期：{works.updated_date}</p>

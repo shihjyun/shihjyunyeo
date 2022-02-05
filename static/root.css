@@ -76,7 +76,11 @@ body.no-scroll {
   --text-xl-3: 72px;
 
   /* useful color */
+  --text-base-gray: #222222; 
+  --light-blue:  #5a90b9;
+  --blue: #326891;
   --deep-blue: #0d324d;
+  --light-purple: #a48da7;
   --purple: #7F5A83;
   --gray: #949899;
   --light-gray: #E4E4E4;
