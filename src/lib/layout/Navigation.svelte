@@ -16,7 +16,7 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: auto auto auto 1fr;
+    grid-template-columns: auto auto 1fr;
     align-items: flex-end;
     height: 100%;
     max-width: 500px;
@@ -49,10 +49,6 @@
     svg:hover {
       fill: var(--purple);
     }
-  }
-
-  .current-place {
-    color: var(--purple);
   }
 
   @media screen and (max-width: 768px) {
