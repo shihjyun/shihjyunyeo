@@ -81,12 +81,12 @@
       class="item"
       style:color={path === '/works' ? 'var(--purple)' : 'var(--text-base-gray)'}>作品</a
     >
-    <a
+    <!-- <a
       sveltekit:prefetch
       href="/post"
       class="item"
       style:color={path.includes('/post') ? 'var(--purple)' : 'var(--text-base-gray)'}>文章</a
-    >
+    > -->
     <div class="social">
       <a href="https://github.com/shihjyun" target="_blank"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
