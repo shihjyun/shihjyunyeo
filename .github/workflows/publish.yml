@@ -1,7 +1,8 @@
 name: update-posts-metadata-action
 on: 
   push: 
-    - '/static/post/**/content.txt'
+    paths: 
+      - '/static/post/**/content.txt'
 jobs:
   update-posts-metadata:
     runs-on: ubuntu-latest
