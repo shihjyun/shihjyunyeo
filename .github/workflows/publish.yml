@@ -1,0 +1,30 @@
+name: update-posts-metadata-action
+on: 
+  push: 
+    - '/static/post/**/content.txt'
+jobs:
+  update-posts-metadata:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install archieml
+        run: npm install -g archieml
+
+      - name: Generate posts' metadata
+        run: node utils/genPostsMeta.cjs
+
+      - name: Add & Commit
+        run: |
+          git config --global user.name 'Steven Yeo'
+          git config --global user.email 'shihjyun.yeo@users.noreply.github.com'
+          git add --all
+          git commit -m "Update posts' metadata"
+          git push origin main
+
+
