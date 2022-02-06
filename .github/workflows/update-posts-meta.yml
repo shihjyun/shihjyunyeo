@@ -16,7 +16,7 @@ jobs:
           node-version: '16'
 
       - name: Install archieml
-        run: npm install -g archieml
+        run: npm install archieml
 
       - name: Generate posts' metadata
         run: node utils/genPostsMeta.cjs
