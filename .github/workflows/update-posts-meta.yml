@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push: 
     paths: 
-      - '/static/post/**/content.txt'
+      - 'static/post/**/content.txt'
 jobs:
   update-posts-metadata:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
 
       - name: Add & Commit
         run: |
-          git config --global user.name 'Steven Yeo'
+          git config --global user.name 'steven bot'
           git config --global user.email 'shihjyun.yeo@users.noreply.github.com'
           git add --all
           git commit -m "Update posts' metadata"

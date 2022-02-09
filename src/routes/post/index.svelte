@@ -18,6 +18,7 @@
       d.dateString = d3.timeFormat('%Y/%m/%d')(d.date);
       return d;
     })
+    .filter(d => d.status === 'published')
     .sort((a, b) => b.date - a.date);
 
   const year = [...new Set(postsMeta.map((d) => d.year))];

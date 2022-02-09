@@ -20,6 +20,7 @@ const genPostsMetaList = () => {
           title: content.title.replace(/<[^>]*>?/gm, ''),
           date: content.date,
           category: content.category,
+          status: content.status,
           slug: dir,
           // ogImage: content.ogImage
         };
