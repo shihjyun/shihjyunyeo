@@ -1,1 +1,1 @@
-[{"title":"文章模板2號🙌","date":"2022/02/01","category":"隨便寫寫","slug":"test-normal"},{"title":"特殊文章模板1號🙌","date":"2022/01/01","category":"隨便寫寫","slug":"test-special"}]
+[{"title":"文章模板2號🙌","date":"2022/02/01","category":"隨便寫寫","status":"draft","slug":"test-normal"},{"title":"特殊文章模板1號🙌","date":"2022/01/01","category":"隨便寫寫","status":"draft","slug":"test-special"}]
