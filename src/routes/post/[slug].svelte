@@ -39,10 +39,10 @@
   <meta content={`${post.title} - Steven Yeo`} property="og:title">
   <meta content={post.description} name="description">
   <meta content="article" property="og:type">
-  <meta content={`${url}/${post.og_mage}`} property="og:image">
+  <meta content={`${url}/${post.og_image}`} property="og:image">
   <meta name="twitter:title" content={`${post.title} - Steven Yeo`}>
   <meta name="twitter:description" content={post.description}>
-  <meta name="twitter:image" content={`${url}/${post.og_mage}`}>
+  <meta name="twitter:image" content={`${url}/${post.og_image}`}>
   <meta name="twitter:card" content="summary_large_image">
 </svelte:head>
 
