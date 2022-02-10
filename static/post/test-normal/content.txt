@@ -3,6 +3,9 @@ title: 文章模板2號🙌
 date: 2022/02/01
 category: 隨便寫寫
 status: draft
+description: 寫點東西寫點東西寫點東西
+og_image: cover.png
+
 
 [+content]
 
