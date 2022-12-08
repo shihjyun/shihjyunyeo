@@ -82,7 +82,7 @@
   }
 
   h1 {
-    max-width: 375px;
+    max-width: 380px;
     font-family: var(--font-primary-cn);
     font-size: var(--text-base);
     line-height: 24px;
@@ -316,7 +316,5 @@
   <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
 <h1>
-  <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是<a style="color: #2d6a4f;" target="_blank" href="https://www.cw.com.tw/graphics/">天下雜誌</a>的圖表工程師。<br /><br
-  /><br /><br
-  />平常喜歡吃拉麵、亂花錢買玩具。
+  <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是<a style="color: #2d6a4f;" target="_blank" href="https://www.cw.com.tw/graphics/">天下雜誌</a>的圖表工程師。<br />平常喜歡吃拉麵、亂花錢買玩具。
 </h1>
