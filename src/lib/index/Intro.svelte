@@ -316,8 +316,7 @@
   <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
 </div>
 <h1>
-  <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是天下雜誌的圖表工程師。<br /><br
-  />目前也與喜歡資料新聞及數位敘事的朋友一起經營
-  <a style="color: #2d6a4f;" target="_blank" href="https://ddstoryhub.com">DD Story Hub</a>，紀錄研究與學習的過程。<br /><br
+  <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是<a style="color: #2d6a4f;" target="_blank" href="https://www.cw.com.tw/graphics/">天下雜誌</a>的圖表工程師。<br /><br
+  /><br /><br
   />平常喜歡吃拉麵、亂花錢買玩具。
 </h1>
