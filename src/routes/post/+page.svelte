@@ -1,15 +1,9 @@
-<script context="module">
-  export async function load({ url, fetch }) {
-    const posts = await fetch(`${url.origin}${url.pathname}/post-meta.json`);
-
-    return { props: { posts: await posts.json() } };
-  }
-</script>
-
 <script>
-  export let posts;
+  export let data;
 
   import * as d3 from 'd3-time-format';
+
+  const posts = data.posts;
 
   let postsMeta = posts
     .map((d) => {
@@ -18,7 +12,7 @@
       d.dateString = d3.timeFormat('%Y/%m/%d')(d.date);
       return d;
     })
-    .filter(d => d.status === 'published')
+    .filter((d) => d.status === 'published')
     .sort((a, b) => b.date - a.date);
 
   const year = [...new Set(postsMeta.map((d) => d.year))];
@@ -70,16 +64,15 @@
 </style>
 
 <h1>
-  一些想寫的東西，內容五花八門，<br />之前寫的一些文章歡迎到<a
-    href="https://www.ddstoryhub.com/author/shihjyun"
-    target="_blank">這邊</a
+  一些想寫的東西，內容五花八門，<br />之前寫的一些文章歡迎到<a href="https://medium.com/@gaez061732" target="_blank"
+    >這邊</a
   >看。
 </h1>
 <div class="posts-wrap">
   {#each year as year}
     <h2>{year}</h2>
     {#each postsMeta as { title, slug }}
-      <a sveltekit:prefetch href={`/post/${slug}`}><h3>{`－  ${title}`}</h3></a>
+      <a data-sveltekit-preload-data href={`/post/${slug}`}><h3>{`－  ${title}`}</h3></a>
     {/each}
   {/each}
 </div>

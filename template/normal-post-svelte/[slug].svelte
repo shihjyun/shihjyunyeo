@@ -29,13 +29,6 @@
   import Post from '$lib/post/Post.svelte';
 
   setContext('url', url);
-
-  // custom components
-  import ExampleComponent from '$lib/post/test-special/ExampleComponent.svelte';
-
-  const components = {
-    'example-component': ExampleComponent,
-  };
 </script>
 
 <svelte:head>
@@ -51,4 +44,4 @@
   <meta name="twitter:card" content="summary_large_image">
 </svelte:head>
 
-<Post {post} {components} />
+<Post {post} />

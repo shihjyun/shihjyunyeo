@@ -1,15 +1,7 @@
-<script context="module">
-  import archieml from 'archieml';
-
-  export async function load({ url, fetch }) {
-    const works = await fetch(`${url.origin}${url.pathname}/works-meta.txt`);
-
-    return { props: { works: archieml.load(await works.text()) } };
-  }
-</script>
-
 <script>
-  export let works;
+  export let data;
+
+  const works = data.works;
 </script>
 
 <style>

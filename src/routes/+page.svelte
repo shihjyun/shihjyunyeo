@@ -1,18 +1,10 @@
-<script context="module">
-  import archieml from 'archieml'
-
-  export async function load({ url, fetch }) {
-    const works = await fetch(`${url.origin}${url.pathname}/works/works-meta.txt`);
-
-    return { props: { works:  archieml.load(await works.text())} };
-  }
-</script>
-
 <script>
   import Intro from '$lib/index/Intro.svelte';
   import RecentWorks from '$lib/index/RecentWorks.svelte';
 
-  export let works;
+  export let data;
+
+  const works = data.works;
 </script>
 
 <style>
