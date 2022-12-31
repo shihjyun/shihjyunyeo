@@ -1,6 +1,46 @@
-updated_date: 2022-02-05
+updated_date: 2022-12-31
 
 [works]
+
+title: 2022台灣九合一大選
+url: https://www.cw.com.tw/graphics/2022-taiwan-local-elections/
+cover: 2022-taiwan-local-elections.gif
+published_date: 2022-11-23
+tags: CW,Svelte,D3
+
+
+title: 從人民日報看習近平如何改變中國
+url: https://www.cw.com.tw/graphics/xi-changes-china/
+cover: xi-changes-china.gif
+published_date: 2022-10-20
+tags: CW,Svelte
+
+
+title: 台皮陸骨監視器調查
+url: https://www.cw.com.tw/graphics/surveillance-and-security-2022/
+cover: surveillance-and-security-2022.gif
+published_date: 2022-09-20
+tags: CW,Svelte
+
+title: 2022中國軍演
+url: https://www.cw.com.tw/graphics/pelosi-visits-taiwan/
+cover: pelosi-visits-taiwan.gif
+published_date: 2022-08-08
+tags: CW,Svelte,D3
+
+
+title: 通膨購買力計算機
+url: https://www.cw.com.tw/graphics/taiwan-inflation-2022/
+cover: taiwan-inflation-2022.gif
+published_date: 2022-06-30
+tags: CW,Svelte,D3
+
+
+title: 半導體企業100強
+url: https://www.cw.com.tw/graphics/cw2000database/news2022/
+cover: cw2000database.gif
+published_date: 2022-05-17
+tags: CW,Svelte,D3
 
 title: 2021台股回顧
 url: https://www.cw.com.tw/graphics/taiwan-stock-market-2021/index.html
