@@ -61,12 +61,12 @@ const createPostDir = () => {
       const componentsDir = `./src/lib/post/${newPostConfig.slug}`;
       fs.mkdirSync(componentsDir);
       fs.copyFileSync(`${templateDir}/ExampleComponent.svelte`, `${componentsDir}/ExampleComponent.svelte`);
-      // create special post's route page
-      const routePageDir = `./src/routes/post/${newPostConfig.slug}`;
-      fs.mkdirSync(routePageDir);
-      const templateIndexFile = fs.readFileSync(`${templateDir}/index.svelte`).toString();
-      fs.writeFileSync(`${routePageDir}/index.svelte`, templateIndexFile.replace('[slug]', newPostConfig.slug));
     }
+    // create post's route page
+    const routePageDir = `./src/routes/post/${newPostConfig.slug}`;
+    fs.mkdirSync(routePageDir);
+    fs.copyFileSync(`${templateDir}/+page.js`, `${routePageDir}/+page.js`);
+    fs.copyFileSync(`${templateDir}/+page.svelte`, `${routePageDir}/+page.svelte`);
     console.log('✅ \tAdd new post successfully!');
     resolve();
   });
