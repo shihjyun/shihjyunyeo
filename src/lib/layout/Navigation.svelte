@@ -1,6 +1,8 @@
 <script>
+  // @ts-ignore
   export let url;
 
+  // @ts-ignore
   $: path = url.pathname;
 </script>
 
@@ -68,14 +70,9 @@
 
 <nav>
   <div class="wrapper">
-    <a sveltekit:prefetch href="/" class="item" style:color={path === '/' ? 'var(--purple)' : 'var(--text-base-gray)'}
-      >Steven Yeo</a
-    >
-    <a
-      sveltekit:prefetch
-      href="/works"
-      class="item"
-      style:color={path === '/works' ? 'var(--purple)' : 'var(--text-base-gray)'}>作品</a
+    <a href="/" class="item" style:color={path === '/' ? 'var(--purple)' : 'var(--text-base-gray)'}>Steven Yeo</a>
+    <a href="/works" class="item" style:color={path.includes('/works') ? 'var(--purple)' : 'var(--text-base-gray)'}
+      >作品</a
     >
     <!-- <a
       sveltekit:prefetch

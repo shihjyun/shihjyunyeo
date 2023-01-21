@@ -2,9 +2,11 @@
   import Navigation from '$lib/layout/Navigation.svelte';
   import Footer from '$lib/layout/Footer.svelte';
 
+  // @ts-ignore
   export let data;
-
-  const url = data.url;
+  
+  // @ts-ignore
+   $: url = data.url;
 </script>
 
 <style>
