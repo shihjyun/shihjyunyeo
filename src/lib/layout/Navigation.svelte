@@ -18,7 +18,7 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto auto 1fr;
     align-items: flex-end;
     height: 100%;
     max-width: 500px;
@@ -74,12 +74,11 @@
     <a href="/works" class="item" style:color={path.includes('/works') ? 'var(--purple)' : 'var(--text-base-gray)'}
       >作品</a
     >
-    <!-- <a
-      sveltekit:prefetch
+    <a
       href="/post"
       class="item"
       style:color={path.includes('/post') ? 'var(--purple)' : 'var(--text-base-gray)'}>文章</a
-    > -->
+    >
     <div class="social">
       <a href="https://github.com/shihjyun" target="_blank"
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
