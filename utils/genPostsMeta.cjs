@@ -7,7 +7,7 @@ const genPostsMetaList = () => {
   const postRoot = './static/post/';
   fs.readdirSync(postRoot).map((dir) => {
     // skip posts' meta data
-    if (dir !== 'post-meta.json') {
+    if (dir !== 'post-meta.json' && dir !== '.DS_Store') {
       const postContentFile = `${postRoot}${dir}/content.txt`;
       const content = archieml.load(fs.readFileSync(postContentFile, { encoding: 'utf8', flag: 'r' }));
       // check if content object is empty
