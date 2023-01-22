@@ -1,0 +1,136 @@
+
+title: 吃飯的工具們
+date: 2023/01/22
+category: 工具
+status: published
+description: 盤點一下在編輯部做圖表和數位敘事常用的工具。
+og_image: cover.png
+
+[+content]
+
+
+
+一眨也入行兩年半了，是一個說 junior 也不 junior，說 senior 也稱不上 senior 的尷尬時期。
+
+所以乾脆來盤點一下日常工作中常用的工具，順便回顧這兩年學了、用了哪些工具，來安慰自己：本身還是有持續學點東西的😌。
+
+先簡單介紹一下現在的工作，我是在雜誌編輯部產製內容的圖表工程師，日常工作大概會是：
+
+[.list]
+* 畫各種圖表
+* 產製數位敘事頁面
+* 地圖製作、地理圖資處理
+* 處理/分析自己組上或其他線路記者的資料
+[]
+
+上面的工作內容可以再粗略歸納成：
+
+[.list]
+* 資料處理
+* 資料視覺化
+* 前端工程
+[]
+
+下面會根據這三大項再去細分各種用途來介紹現在用到的工具。
+
+
+heading2: 資料處理：日常到不行的部分。
+
+⁃
+
+[.list]
+* <strong>串接資料 API & 爬蟲</strong>： <code>jsonlite</code>, <code>Selenium</code> ,<code>rvest</code>
+* <strong>資料清理（字串處理、欄位轉換 … 等）</strong>： <code>tidyverse</code> 全家桶
+* <strong>資料分析</strong>： <code>tidyverse</code> 全家桶
+* <strong>圖資處理</strong>： <code>sf</code> / QGIS 混著用
+* <strong>圖資簡化</strong>： <code>topojson-*</code> 系列
+[]
+
+自己習慣使用 R，所以下面列出來的大部分是 R 套件，但只要夠熟練用什麼工具其實沒那麼重要，因為最後都要把結果輸出成 <code>csv</code> , <code>JSON</code> ，再進一步去產製圖表。
+
+
+
+heading2: 資料視覺化：最有趣的部分。
+
+⁃
+
+[.list]
+* <strong>資料探索前期畫草圖</strong>： observable, <code>ggplot2</code>
+* <strong>在網頁上畫地圖</strong>： D3.js
+* <strong>靜態圖表後製</strong>： illustrator, Photoshop
+* <strong>做 3D 的東西像是 3D 地球</strong>： Three.js
+* <strong>網頁上所呈現的資料量有點多</strong>： 網頁中呈現資料的方式以 Canvas API 替代 SVG
+* <strong>網頁上所呈現的資料量非常非常非常多</strong>： Three.js 或 regl.js
+* <strong>做漂亮的浮雕地圖(relief map)</strong>： QGIS 處理圖資 > Blender 渲染地形 > Photoshop 後製 
+* <strong>SVG 圖表元素處理</strong>： D3.js（bar, bubble, point, path 應該要出現在哪個位置？要是什麼顏色？ … 等）
+[]
+
+產製圖表的工具很多，從 no-code 到一個一個像素刻的都有，但因為工作上客製化的需求比較高，自己也不喜歡被套件的功能限制住，所以在網頁 production 上還是多以彈性較高的工具為主。
+
+這邊簡單提供一張寫 shader 寫到懷疑人生時所畫自己的工具學習曲線圖：
+
+{.image}
+src: steven-viz-tools-learning-curve.png
+alt: stevenㄉ工具學習曲線
+caption: 每個人的路線可能不一樣
+{}
+
+要做高度客製化的圖表機乎離不開 D3，而 Three.js 和 GLSL 算是選修，每個人路線可能不太一樣。有些人可能也選擇研究地圖、影音之類的。
+
+
+
+heading2: 前端工程：學不完的部分。
+
+⁃
+
+[.list]
+* <strong>前端框架</strong>： Svelte
+* <strong>頁面產製工具</strong>： SvelteKit
+* <strong>滾動敘事工具</strong>： Scrollama
+* <strong>腳本結構化工具</strong>： ArchieML
+[]
+
+對我來說 Svelte 最大的優點就是「讓自己知道自己在寫什麼」，也因為這個優點 Svelte 相較於其他前端框架學習曲線相對平緩許多，可以讓剛踏入前端的新手挫折感不會那麼大，沒錯，那個新手就是兩年前的我。
+
+其實在日常工作上用到的工具不止這些，推薦前同事丹尼爾寫過的<a target="_blank" href="https://medium.com/cw-graphics/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%E9%83%BD%E5%A5%BD%E7%88%9B-%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%95%B8%E4%BD%8D%E5%B0%88%E8%BC%AF-21092268be9b">管理系統都好爛，如何管理數位專輯？</a>來了解更多。
+
+
+
+
+horizon-rule: 
+
+heading2: 更多時候應該思考「為什麼要用？」
+
+工具就只是工具，工具背後都要有一定程度的領域知識，才能更有效地去使用它們。有了基礎的領域知識才能更清楚地來回答「為什麼要用？」。
+
+而學習每個工具的初期背後都一定有個「想」：
+
+[.list]
+* 想做出與其他人不一樣的圖表！
+* 想在網頁上呈現 3D 內容！
+* 想用技術把故事說的更好！
+* 想 ...
+[]
+
+如果沒有這些「想」，單純盲目學工具的話會非常累（至少我是這樣啦）。
+
+horizon-rule: 
+
+以上，這篇只單純記錄吃飯的工具們，最後強調，要做出 XXX 效果、要達到 XXX 目的所可以使用的工具百百種，上面提的僅供參考而已。
+
+如果有興趣的朋友對學習以上工具的乾貨有興趣，可以直接從 <a target="_blank" href="https://twitter.com/shihjyunyeo">twitter</a> 敲我。
+
+感謝 Daniel 給予那張簡陋的學習曲線圖建議！
+
+horizon-rule: 
+
+如果問我為什麼大過年的還有心情寫跟工作有關的文章，因為年夜飯 8 道菜中有 3 道就有芋頭元素，所以這篇文章是身爲芋頭 hater 化悲憤為力量的結果。
+
+{.image}
+src: 芋頭.jpg
+alt: 芋頭
+caption: 芋頭👎
+{}
+
+
+[]
