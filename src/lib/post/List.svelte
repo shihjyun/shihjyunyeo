@@ -4,9 +4,14 @@
 
 <style>
   ul {
-    list-style-position: inside;
+    list-style-position: outside;
     list-style-type: disc;
-    margin-bottom: 28px;
+    margin: -18px 0 28px 18px;
+  }
+
+  li {
+    line-height: 1.4;
+    padding: 2px;
   }
 </style>
 

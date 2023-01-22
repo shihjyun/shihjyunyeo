@@ -47,9 +47,14 @@
       margin: 48px 0;
     }
 
+    :global(strong) {
+      font-weight: 500;
+    }
+
     :global(a) {
       padding: 0 1px;
       border-bottom: 1px solid var(--light-gray);
+      color: var(--purple);
     }
 
     :global(a:hover) {
@@ -57,8 +62,10 @@
     }
 
     :global(code) {
+      font-size: 14px;
       font-family: 'Fira Mono', 'Noto Sans TC';
       padding: 0 4px;
+      color: #2d2d2d;
       background-color: var(--light-gray);
     }
   }
