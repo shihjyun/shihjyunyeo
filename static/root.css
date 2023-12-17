@@ -53,6 +53,11 @@ img,video{max-width:100%;height:auto}
   font-family: var(--font-primary-cn);
 }
 
+body {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
 body.no-scroll {
   overflow-y: hidden;
   height:100%;
@@ -80,14 +85,33 @@ body.no-scroll {
   --light-blue:  #5a90b9;
   --blue: #326891;
   --deep-blue: #0d324d;
-  --light-purple: #a48da7;
+  --light-purple: #c2c2c2;
   --purple: #7F5A83;
   --gray: #949899;
   --light-gray: #E4E4E4;
 
+  /* dark mode */
+  --dark: #1a1a1a;
+  --white: #FFFFFF;
+  --dark-white:rgb(205, 205, 205);
 
   /* tag color */
   --tag-color-type: #6C5281;
   --tag-color-tool: #DF6A35;
   --tag-color-form: #b3475f;
+}
+
+@font-face {
+  font-family: Virgil;
+  src: url(Virgil.woff2);
+}
+
+@font-face {
+  font-family: PTMono;
+  src: url(PTMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  src: url(RobotoMono-Regular.ttf);
 }

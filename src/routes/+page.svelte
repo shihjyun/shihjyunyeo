@@ -1,16 +1,17 @@
 <script>
-  import Intro from '$lib/index/Intro.svelte';
-  import RecentWorks from '$lib/index/RecentWorks.svelte';
+  import WorkItem from '$lib/index/WorkItem.svelte';
+  import Social from '$lib/index/Social.svelte';
 
   export let data;
 
   const works = data.works;
 </script>
 
-<style>
+<style lang="scss">
   section {
-    max-width: 500px;
-    margin: 0 auto 3rem auto;
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem;
   }
 
   section.intro {
@@ -19,11 +20,37 @@
     align-items: center;
   }
 
+  section.social {
+    margin-bottom: 48px;
+  }
+
+  section.feature-works {
+    max-width: 800px;
+    margin-bottom: 8rem;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-family: Virgil, sans-serif;
+    color: var(--light-white);
+    margin: 60px auto 0 auto;
+  }
+
   p {
-    font-size: 14px;
-    color: rgb(87, 87, 87);
-    text-align: center;
-    margin: 80px auto 48px auto;
+    font-size: 16px;
+    font-family: 'PT Mono', monospace;
+    line-height: 1.4;
+    color: var(--dark-white);
+    margin: 32px auto 32px auto;
+
+    a {
+      font-family: 'PT Mono', monospace;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
   }
 </style>
 
@@ -35,9 +62,20 @@
 </svelte:head>
 
 <section class="intro">
-  <Intro />
+  <h1>Steven Yeo</h1>
+  <p>
+    I am a data visualization developer currently working at <a
+      href="https://www.cw.com.tw/graphics/"
+      target="_blank"
+      rel="noreferrer">CommonWealth Magazine</a
+    >, based in Taipei, Taiwan.<br /><br /> I love telling interesting stories through compelling charts!
+  </p>
 </section>
-<section class="recent-projects">
-  <RecentWorks works={works.works} />
+<section class="social">
+  <Social />
 </section>
-<p>更新日期：{works.updated_date}</p>
+<section class="feature-works">
+  {#each works.works as workInfo}
+    <WorkItem {workInfo} />
+  {/each}
+</section>

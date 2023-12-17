@@ -1,117 +1,75 @@
-updated_date: 2022-12-31
+updated_date: 2023-12-17
 
 [works]
 
-title: 2022台灣九合一大選
+title: The Flight Paths of Taoyuan International Airport in a Day
+url: https://twitter.com/shihjyunyeo/status/1720042217115664813
+slug: 30days-map-challenge-lines
+animation_cover: true
+published_date: 2023-11-02
+tools: Svelte,D3,QGIS
+type: Personal Creation
+
+title: Taipei's Bus Traffic on Saturday
+url: https://twitter.com/shihjyunyeo/status/1719497007906365618
+slug: 30days-map-challenge-points
+animation_cover: true
+published_date: 2023-11-01
+tools: Svelte,D3,QGIS,Three.js,R
+type: Personal Creation
+
+
+title: The Five Most Frequently Hot Areas in Taipei
+url: https://www.cw.com.tw/graphics/taipei-heat/
+slug: taipei-heat
+animation_cover: true
+published_date: 2023-07-17
+tools: Svelte,D3,QGIS,R
+type: CommonWealth
+
+title: Rebounding Air Traffic Over Taiwan
+url: https://www.cw.com.tw/graphics/covid-airline-travel/
+slug: covid-airline-travel
+animation_cover: true
+published_date: 2023-06-07
+tools: Svelte,D3,QGIS,Three.js
+type: CommonWealth
+
+title: 2022 Taiwan Local Elections
 url: https://www.cw.com.tw/graphics/2022-taiwan-local-elections/
-cover: 2022-taiwan-local-elections.gif
+slug: 2022-taiwan-local-elections
+animation_cover: false
 published_date: 2022-11-23
-tags: CW,Svelte,D3
+tools: Svelte,D3,QGIS,R
+type: CommonWealth
 
-
-title: 從人民日報看習近平如何改變中國
-url: https://www.cw.com.tw/graphics/xi-changes-china/
-cover: xi-changes-china.gif
-published_date: 2022-10-20
-tags: CW,Svelte
-
-
-title: 台皮陸骨監視器調查
+title: Uncovering the Truth Behind MIT Surveillance System
 url: https://www.cw.com.tw/graphics/surveillance-and-security-2022/
-cover: surveillance-and-security-2022.gif
+slug: surveillance-and-security-2022
+animation_cover: true
 published_date: 2022-09-20
-tags: CW,Svelte
+tools: Svelte
+type: CommonWealth
 
-title: 2022中國軍演
-url: https://www.cw.com.tw/graphics/pelosi-visits-taiwan/
-cover: pelosi-visits-taiwan.gif
-published_date: 2022-08-08
-tags: CW,Svelte,D3
-
-
-title: 通膨購買力計算機
-url: https://www.cw.com.tw/graphics/taiwan-inflation-2022/
-cover: taiwan-inflation-2022.gif
-published_date: 2022-06-30
-tags: CW,Svelte,D3
-
-
-title: 半導體企業100強
-url: https://www.cw.com.tw/graphics/cw2000database/news2022/
-cover: cw2000database.gif
-published_date: 2022-05-17
-tags: CW,Svelte,D3
-
-title: 2021台股回顧
-url: https://www.cw.com.tw/graphics/taiwan-stock-market-2021/index.html
-cover: taiwan-stock-market-2021.gif
-published_date: 2022-01-25
-tags: CW,Svelte,D3
-
-title: 2021台灣公投即時開票
-url: https://www.cw.com.tw/graphics/referendum-2021/
-cover: referendum-2021.gif
-published_date: 2021-12-19
-tags: CW,Svelte,D3
-
-title: 北海航線
-url: https://www.thenewslens.com/interactive/155498
-cover: northern-sea-route.gif
-published_date: 2021-11-12
-tags: TNL,Svelte,QGIS,Blender
-
-title: 2021日本大選
-url: https://www.thenewslens.com/interactive/150604
-cover: japan-election-2021.gif
-published_date: 2021-10-14
-tags: TNL,Svelte
-
-title: 加密貨幣遭駭損失視覺化
+title: Examining Crypto Losses from Recent Hacks
 url: https://www.thenewslens.com/interactive/155175
-cover: crypto-exchange-hacks.gif
-published_date: 2021-08-15
-tags: TNL,Svelte,D3,illustrator
+slug: crypto-scam
+animation_cover: true
+published_date: 2021-08-18
+tools: Svelte,D3
+type: The News Lens
 
-title: DD Story Hub
-url: https://www.ddstoryhub.com
-cover: ddstoryhub.png
-published_date: 2021-08-15
-tags: DD Story hub,Svelte
-
-title: 疫情下的「薪」情
-url: https://www.thenewslens.com/interactive/153726
-cover: income-2020.gif
-published_date: 2021-07-28
-tags: TNL,Svelte,D3
-
-title: 福島核災十週年
-url: https://www.thenewslens.com/interactive/148194
-cover: 311-10th-fukushima.gif
-published_date: 2021-03-10
-tags: TNL,Svelte
-
-title: 農民曆視覺花
+title: 2021 Taiwan Lunar Calendar Visualization
 url: https://lunar-cal-viz-2021.vercel.app/
-cover: lunar-viz.png
-published_date: 2021-02-12
-tags: Side Project,Svelte,D3,R
+slug: lunar-cal-viz-2021
+animation_cover: false
+published_date: 2022-01-01
+tools: Svelte,D3
+type: Personal Creation
 
-title: 房屋實價登錄互動報導
-url: https://www.thenewslens.com/interactive/144635
-cover: house-price-2020.gif
-published_date: 2020-12-15
-tags: TNL,Svelte,D3,R,QGIS
 
-title: 美國總統大選即時開票
-url: https://www.thenewslens.com/interactive/142038
-cover: us-election-2020.gif
-published_date: 2020-11-04
-tags: TNL,Svelte,D3,R
 
-title: 罷韓指南針
-url: https://han-recall-vote.vercel.app/
-cover: han-recall-vote.png
-published_date: 2020-06-07
-tags: Side Project,Svelte,D3,R
+
+
 
 []

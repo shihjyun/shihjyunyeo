@@ -29,7 +29,8 @@ const config = {
   }),
 
 	alias: {
-		'$static': 'static/*'
+		'$static': 'static/*',
+    '$lib': 'src/lib/*'
 	}
 };
 
