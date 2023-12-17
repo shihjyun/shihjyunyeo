@@ -1,5 +1,6 @@
 <script>
   import WorkItem from '$lib/index/WorkItem.svelte';
+  import Social from '$lib/index/Social.svelte';
 
   export let data;
 
@@ -9,7 +10,8 @@
 <style lang="scss">
   section {
     max-width: 600px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem;
   }
 
   section.intro {
@@ -18,8 +20,13 @@
     align-items: center;
   }
 
+  section.social {
+    margin-bottom: 48px;
+  }
+
   section.feature-works {
     max-width: 800px;
+    margin-bottom: 8rem;
   }
 
   h1 {
@@ -30,9 +37,9 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'PT Mono', monospace;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--dark-white);
     margin: 32px auto 32px auto;
 
@@ -57,13 +64,18 @@
 <section class="intro">
   <h1>Steven Yeo</h1>
   <p>
-    I'm a data viz developer at <a href="https://www.cw.com.tw/graphics/" target="_blank">CommonWealth Magazine</a>.<br
-    />Some of my work ...
+    I am a data visualization developer currently working at <a
+      href="https://www.cw.com.tw/graphics/"
+      target="_blank"
+      rel="noreferrer">CommonWealth Magazine</a
+    >, based in Taipei, Taiwan.<br /><br /> I love telling interesting stories through compelling charts!
   </p>
 </section>
+<section class="social">
+  <Social />
+</section>
 <section class="feature-works">
-  <WorkItem />
-  <WorkItem />
-  <WorkItem />
-  <WorkItem />
+  {#each works.works as workInfo}
+    <WorkItem {workInfo} />
+  {/each}
 </section>
