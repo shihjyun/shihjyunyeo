@@ -1,6 +1,24 @@
-updated_date: 2023-12-17
+updated_date: 2024-01-18
 
 [works]
+
+title: The Position of Taiwan in the Satellite Race
+url: https://www.cw.com.tw/graphics/taiwan-and-starlink/index.html
+slug: taiwan-and-starlink
+animation_cover: true
+published_date: 2024-01-18
+tools: Svelte,D3,Threlte
+type: CommonWealth
+
+
+title: 2024 Taiwan Presidential Election
+url: https://www.cw.com.tw/graphics/2024-taiwan-elections/
+slug: 2024-taiwan-presidential-elections
+animation_cover: false
+published_date: 2024-01-13
+tools: Svelte,D3
+type: CommonWealth
+
 
 title: The Flight Paths of Taoyuan International Airport in a Day
 url: https://twitter.com/shihjyunyeo/status/1720042217115664813
