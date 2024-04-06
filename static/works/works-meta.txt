@@ -1,6 +1,15 @@
-updated_date: 2024-01-18
+updated_date: 2024-04-06
 
 [works]
+
+title: The Price of Taiwan Energy Transition
+url: https://www.cw.com.tw/graphics/the-price-of-taiwan-energy-transition/index.html
+slug: the-price-of-taiwan-energy-transition
+animation_cover: true
+published_date: 2024-03-25
+tools: Svelte,D3,Threlte,QGIS
+type: CommonWealth
+
 
 title: The Position of Taiwan in the Satellite Race
 url: https://www.cw.com.tw/graphics/taiwan-and-starlink/index.html
