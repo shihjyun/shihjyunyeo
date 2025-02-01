@@ -100,14 +100,14 @@
     >
       {#if workInfo.animation_cover == 'true'}
         {#await preloadImage(`works/cover/${workInfo.slug}.gif`) then value}
-          <img class="animation img-element" in:fade src={`works/cover/${workInfo.slug}.gif`} alt={workInfo.slug} />
+          <img class="animation img-element" in:fade|global src={`works/cover/${workInfo.slug}.gif`} alt={workInfo.slug} />
         {/await}
       {/if}
       {#await preloadImage(`works/cover/${workInfo.slug}.jpg`) then value}
         <img
           class="cover img-element"
           class:hide={hoveredCover && workInfo.animation_cover == 'true'}
-          in:fade
+          in:fade|global
           src={`works/cover/${workInfo.slug}.jpg`}
           alt={workInfo.slug}
         />
