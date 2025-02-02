@@ -2,7 +2,7 @@
   import WorkItem from '$lib/index/WorkItem.svelte';
   import Social from '$lib/index/Social.svelte';
 
-  export let data;
+  let { data } = $props();
 
   const works = data.works;
 </script>

@@ -1,9 +1,16 @@
 <script>
-  // @ts-ignore
-  export let data;
+  
+  /**
+   * @typedef {Object} Props
+   * @property {any} data
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { data, children } = $props();
   
   // @ts-ignore
-   $: url = data.url;
+   let url = $derived(data.url);
 </script>
 
 <style>
@@ -11,4 +18,4 @@
 </style>
 
 
-<slot />
+{@render children?.()}

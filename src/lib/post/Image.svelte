@@ -1,7 +1,7 @@
 <script>
-  export let value;
 
   import { getContext } from 'svelte';
+  let { value } = $props();
 
   const url = getContext('url');
 </script>

@@ -1,5 +1,4 @@
 <script>
-  export let data;
 
   const url = data.url;
   const post = data.post;
@@ -7,6 +6,7 @@
   import { setContext } from 'svelte';
 
   import Post from '$lib/post/Post.svelte';
+  let { data } = $props();
 
   setContext('url', url);
 </script>

@@ -1,6 +1,13 @@
 <script>
-  // @tagType - `--tag-color-type` , `--tag-color-tool`
-  export let tagType
+  
+  /**
+   * @typedef {Object} Props
+   * @property {any} tagType
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { tagType, children } = $props();
 </script>
 
 <style>
@@ -32,4 +39,4 @@
   }
 </style>
 
-<span style="background-color: var({tagType})"><slot /></span>
+<span style="background-color: var({tagType})">{@render children?.()}</span>

@@ -1,9 +1,15 @@
 <script>
-  // @ts-ignore
-  export let url;
+  
+  /**
+   * @typedef {Object} Props
+   * @property {any} url
+   */
+
+  /** @type {Props} */
+  let { url } = $props();
 
   // @ts-ignore
-  $: path = url.pathname;
+  let path = $derived(url.pathname);
 </script>
 
 <style lang="scss">

@@ -1,5 +1,4 @@
 <script>
-  export let data;
 
   const url = data.url;
   const post = data.post;
@@ -12,6 +11,7 @@
 
   // custom components
   import ExampleComponent from '$lib/post/test-special/ExampleComponent.svelte';
+  let { data } = $props();
 
   const components = {
     'example-component': ExampleComponent,

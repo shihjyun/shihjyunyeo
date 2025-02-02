@@ -1,5 +1,5 @@
 <script>
-  let triggerMask, backPath, frontPath, stevenWork, stevenHi;
+  let triggerMask = $state(), backPath = $state(), frontPath = $state(), stevenWork = $state(), stevenHi = $state();
 
   function handleTouchEnter() {
     triggerMask.addEventListener('mouseleave', handleTouchLeave);
@@ -313,7 +313,7 @@
     src="/assets/index/images/steven-hi.png"
     alt="hi steven"
   />
-  <div bind:this={triggerMask} class="trigger-mask" on:mouseenter={handleTouchEnter} on:touchstart={handleTouchEnter} />
+  <div bind:this={triggerMask} class="trigger-mask" onmouseenter={handleTouchEnter} ontouchstart={handleTouchEnter}></div>
 </div>
 <h1>
   <span id="shaking-hand" style:display="inline-block">👋！</span>我是Steven，現在是<a style="color: #2d6a4f;" target="_blank" href="https://www.cw.com.tw/graphics/">天下雜誌</a>的圖表工程師。<br />平常喜歡吃拉麵、亂花錢買玩具。

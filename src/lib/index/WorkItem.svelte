@@ -2,13 +2,13 @@
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
 
-  export let workInfo;
+  let { workInfo } = $props();
 
   // onMount(() => {
   //   preloadImage('works/cover_test/taipei-heat.jpg');
   // });
 
-  let hoveredCover = false;
+  let hoveredCover = $state(false);
 
   function handleMouseOver() {
     hoveredCover = true;
@@ -87,16 +87,16 @@
   }
 </style>
 
-<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <a href={workInfo.url} target="_blank" rel="noreferrer">
   <div class="work-item">
     <h2>{workInfo.title}</h2>
     <div
       class="work-cover"
-      on:touchstart={handleMouseOver}
-      on:mouseover={handleMouseOver}
-      on:touchend={handleMouseLeave}
-      on:mouseleave={handleMouseLeave}
+      ontouchstart={handleMouseOver}
+      onmouseover={handleMouseOver}
+      ontouchend={handleMouseLeave}
+      onmouseleave={handleMouseLeave}
     >
       {#if workInfo.animation_cover == 'true'}
         {#await preloadImage(`works/cover/${workInfo.slug}.gif`) then value}
@@ -112,7 +112,7 @@
           alt={workInfo.slug}
         />
       {/await}
-      <div class="filter img-element" class:hide={hoveredCover} />
+      <div class="filter img-element" class:hide={hoveredCover}></div>
     </div>
     <!-- <p>{@html workInfo.description}</p> -->
   </div>

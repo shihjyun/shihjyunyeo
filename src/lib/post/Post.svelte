@@ -1,9 +1,8 @@
 <script>
-  export let post;
-  export let components = {};
 
   import Image from './Image.svelte';
   import List from './List.svelte';
+  let { post, components = {} } = $props();
 
 </script>
 
@@ -105,7 +104,8 @@
         <List {value} />
       {:else if type === 'component'}
         <!-- custom component -->
-        <svelte:component this={components[value]} />
+        {@const SvelteComponent = components[value]}
+        <SvelteComponent />
       {/if}
     {/each}
   </div>
