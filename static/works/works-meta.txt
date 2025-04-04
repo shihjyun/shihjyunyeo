@@ -2,6 +2,32 @@ updated_date: 2024-04-06
 
 [works]
 
+title: PLA Activities Around Taiwan: Interactive Dashboard
+url: https://www.cw.com.tw/graphics/pla-activities-around-taiwan/
+slug: pla-activities-around-taiwan
+published_date: 2025-03-26
+tools: Svelte,D3,QGIS,MapLibre
+type: CommonWealth
+
+
+title: Analyzing China’s Gray-Zone Strategy Against Taiwan via Kinmen
+url: https://www.cw.com.tw/graphics/china-uses-gray-zone-tactics-against-taiwan-kinmen/
+slug: china-uses-gray-zone-tactics-against-taiwan-kinmen
+animation_cover: true
+published_date: 2025-03-18
+tools: Svelte,D3,QGIS
+type: CommonWealth
+
+
+title: Taroko Park's Long Road to Recovery
+url: https://www.cw.com.tw/graphics/aftermath-of-hualien-earthquake-2024-en/
+slug: aftermath-of-hualien-earthquake-2024-en
+animation_cover: true
+published_date: 2024-07-23
+tools: Svelte,D3,Blender,QGIS
+type: CommonWealth
+
+
 title: Taiwan's Alishan Mountain Tea on the Verge
 url: https://www.cw.com.tw/graphics/taiwan-alishan-spring-tea-on-the-verge/index.html
 slug: taiwan-alishan-spring-tea-on-the-verge
